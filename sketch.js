@@ -29,6 +29,8 @@ function Cell(i,j)
   {
     var x = this.i*w;
     var y = this.j*w;
+    stroke(255);
+    noFill();
     rect(x,y,w,w);
   }
 }
