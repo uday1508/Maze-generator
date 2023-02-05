@@ -31,6 +31,8 @@ function Cell(i,j)
     var y = this.j*w;
     stroke(255);
     noFill();
+    line(x,y,x+w,y);
+    line(x+w,y,x,y+w);
     rect(x,y,w,w);
   }
 }
