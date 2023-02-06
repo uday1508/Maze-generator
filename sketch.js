@@ -33,8 +33,8 @@ function Cell(i,j)
     noFill();
     line(x,y,x+w,y);
     line(x+w,y,x+w,y+w);
-    line(x,y+w,x,y+w);
-    line(x,y+w,x+w,y);
+    line(x,y+w,x+w,y+w);
+    line(x,y,x,y+w);
     rect(x,y,w,w);
   }
 }
