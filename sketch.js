@@ -31,10 +31,10 @@ function Cell(i,j)
     var y = this.j*w;
     stroke(255);
     noFill();
-    line(x,y,x+w,y);
-    line(x+w,y,x+w,y+w);
-    line(x,y+w,x+w,y+w);
-    line(x,y,x,y+w);
-    rect(x,y,w,w);
+    line(x,y,x+w,y);   //top  
+    line(x+w,y,x+w,y+w);     //left
+    line(x,y+w,x+w,y+w);   //bottom
+    line(x,y,x,y+w);   //right
+    //rect(x,y,w,w);
   }
 }
