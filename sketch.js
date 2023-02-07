@@ -18,7 +18,7 @@ function setup() {
 function draw() {
   background(220);
   for(var i = 0 ; i < boxes.length; i++) boxes[i].show();
-  var current ;
+  
 }
 
 function Cell(i,j)
