@@ -35,6 +35,6 @@ function Cell(i,j)
     line(x+w,y,x+w,y+w);     //left
     line(x,y+w,x+w,y+w);   //bottom
     line(x,y,x,y+w);   //right
-    //rect(x,y,w,w);
+    
   }
 }
