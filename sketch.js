@@ -1,6 +1,7 @@
 var rows,cols;
 var w = 50;
 var boxes = [];
+var current;
 function setup() {
   createCanvas(500, 500);
   rows = width/w;
