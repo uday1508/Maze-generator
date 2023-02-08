@@ -14,6 +14,7 @@ function setup() {
       boxes.push(cell);
     }
   }
+  current = boxes[7];
 }
 
 function draw() {
