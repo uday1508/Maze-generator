@@ -20,7 +20,7 @@ function setup() {
 function draw() {
   background(220);
   for(var i = 0 ; i < boxes.length; i++) boxes[i].show();
-  
+   current.highlight();
 }
 
 function Cell(i,j)
@@ -38,5 +38,13 @@ function Cell(i,j)
     line(x,y+w,x+w,y+w);   //bottom
     line(x,y,x,y+w);   //right
     
+  }
+  this.highlight = function() {
+    var x = this.i * w;
+    var y = this.j * w;
+    noStroke();
+    fill(255,255, 255, 200);
+    rect(x, y, w, w);
+
   }
 }
