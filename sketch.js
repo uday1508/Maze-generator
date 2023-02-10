@@ -34,10 +34,10 @@ function Cell(i,j)
     var y = this.j*w;
     stroke(255);
     noFill();
-    line(x,y,x+w,y);   //top  
-    line(x+w,y,x+w,y+w);     //left
-    line(x,y+w,x+w,y+w);   //bottom
-    line(x,y,x,y+w);   //right
+    if(this.walls[0]) line(x,y,x+w,y);   //top  
+    if(this.walls[1]) line(x+w,y,x+w,y+w);     //left
+    if(this.walls[2])line(x,y+w,x+w,y+w);   //bottom
+    if(this.walls[3])  line(x,y,x,y+w);   //right
     
   }
   this.highlight = function() {
