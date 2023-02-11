@@ -1,5 +1,6 @@
 var rows,cols;
 var w = 50;
+var stack = [];
 var boxes = [];
 var current;
 function setup() {
