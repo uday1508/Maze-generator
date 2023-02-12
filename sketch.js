@@ -49,4 +49,8 @@ function Cell(i,j)
     rect(x, y, w, w);
 
   }
+  function Show(px,py)
+      {
+         circle(px,py,30);
+      }
 }
