@@ -22,7 +22,7 @@ function draw() {
   background(220);
   for(var i = 0 ; i < boxes.length; i++) boxes[i].show();
    current.highlight();
-   if(IsKeyPressed){
+   if(KeyIsPressed){
       if(KeyCode)
       if(KeyCode)
       if(KeyCode)
