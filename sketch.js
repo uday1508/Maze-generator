@@ -23,8 +23,8 @@ function draw() {
   for(var i = 0 ; i < boxes.length; i++) boxes[i].show();
    current.highlight();
    if(KeyIsPressed){
-      if(KeyCode)
-      if(KeyCode)
+      if(KeyCode == RIGHT_ARROW)
+      if(KeyCode == LEFT_ARROW)
       if(KeyCode)
       if(KeyCode)
  }
