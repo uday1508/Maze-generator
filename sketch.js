@@ -25,8 +25,8 @@ function draw() {
    if(KeyIsPressed){
       if(KeyCode == RIGHT_ARROW)
       if(KeyCode == LEFT_ARROW)
-      if(KeyCode)
-      if(KeyCode)
+      if(KeyCode == DOWN_ARROW)
+      if(KeyCode == UP_ARROW)
  }
 
 }
