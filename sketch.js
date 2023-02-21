@@ -27,6 +27,13 @@ function draw() {
 
 }
 
+function index(i,j){
+  if(i < 0 && j < 0 && i > cols - 1 && j > rows - 1){
+    return - 1;
+  }
+  return i+j*cols;
+}
+
 function Cell(i,j)
 {
   this.i = i;
@@ -61,6 +68,24 @@ function Cell(i,j)
     var right = boxes[index(i + 1,j)];
     var bottom = boxes[index(i,j+1)];
     var left = boxes[index(i - 1,j)];
+    
+    if(!top.visited && top){
+      che.push(top);
+   }
+    if(!right.visited && right){
+      che.push(right);
+   }
+    if(!bottom.visited && bottom){
+      che.push(bottom);
+   }
+    if(!left.visited && left){
+      che.push(left);
+   }
+    
+    if(che.lenght > 0 ){
+      var u = floor(random(0,che.length));
+      return u;
+    }
   }
  
 }
