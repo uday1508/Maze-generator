@@ -22,12 +22,7 @@ function draw() {
   background(220);
   for(var i = 0 ; i < boxes.length; i++) boxes[i].show();
    current.highlight();
-   if(KeyIsPressed){
-      if(KeyCode == RIGHT_ARROW)
-      if(KeyCode == LEFT_ARROW)
-      if(KeyCode == DOWN_ARROW)
-      if(KeyCode == UP_ARROW)
- }
+   
 
 }
 
@@ -56,5 +51,4 @@ function Cell(i,j)
     rect(x, y, w, w);
 
   }
- 
 }
