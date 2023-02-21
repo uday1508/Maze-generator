@@ -21,6 +21,7 @@ function setup() {
 function draw() {
   background(220);
   for(var i = 0 ; i < boxes.length; i++) boxes[i].show();
+   current.visited = true;
    current.highlight();
    
 
@@ -31,6 +32,8 @@ function Cell(i,j)
   this.i = i;
   this.j = j;
   this.walls = [true , true , true , true ];
+  this.visited = false;
+  
   this.show = function()
   {
     var x = this.i*w;
@@ -51,4 +54,13 @@ function Cell(i,j)
     rect(x, y, w, w);
 
   }
+  
+  this.check = function(){
+    var che = [];
+    var top = boxes[index(i,j-1)];
+    var right = boxes[index(i + 1,j)];
+    var bottom = boxes[index(i,j+1)];
+    var left = boxes[index(i - 1,j)];
+  }
+ 
 }
