@@ -20,7 +20,7 @@ function setup() {
 }
 
 function draw() {
-  background(0,255,0,20);
+  background(150,205,0);
   for(var i = 0 ; i < boxes.length; i++){
     boxes[i].show();
   }
@@ -29,6 +29,7 @@ function draw() {
    var link = current.check();
    if(link){
      link.visited = true;
+     eraseWalls(current , link);
      current = link;
    }
 }
@@ -110,9 +111,30 @@ function Cell(i,j)
 
     if (this.visited) {
       noStroke();
-      fill(255, 255, 255,100);
+      fill( 1,15,180);
       rect(x, y, w, w);
     }
   }
+}
+
+function eraseWalls(a,b){
+  var x = a.i - b.i
+  if(x === 1){
+    a.walls[3] = false;
+    b.walls[1] = false;
+  }
+  else if(x === -1){
+    a.walls[1] = false;
+    b.walls[3] = false;
+  }
   
+  var y = a.j - b.j;
+  if(y === 1){
+      a.walls[0] = false;
+      b.walls[2] = false;
+  }
+  else if(y === -1){
+    a.walls[2] = false;
+    b.walls[0] = false;
+  }
 }
