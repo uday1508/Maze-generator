@@ -16,15 +16,15 @@ function setup() {
       boxes.push(cell);
     }
   }
-  current = boxes[0];
+  current = random(boxes);
 }
 
 function draw() {
-  background(22);
+  background(0,255,0,20);
   for(var i = 0 ; i < boxes.length; i++){
     boxes[i].show();
   }
-   current.highlight();
+  // current.highlight();
    current.visited = true;
    var link = current.check();
    if(link){
@@ -86,7 +86,7 @@ function Cell(i,j)
     var x = this.i * w;
     var y = this.j * w;
     noStroke();
-    fill(255,255, 255, 200);
+    fill(255,255, 255);
     rect(x, y, w, w);
 
   }
@@ -110,8 +110,9 @@ function Cell(i,j)
 
     if (this.visited) {
       noStroke();
-      fill(255, 0, 255, 100);
+      fill(255, 255, 255,100);
       rect(x, y, w, w);
     }
   }
-  }
+  
+}
