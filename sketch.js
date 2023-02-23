@@ -24,13 +24,16 @@ function draw() {
   for(var i = 0 ; i < boxes.length; i++){
     boxes[i].show();
   }
-  // current.highlight();
+   current.highlight();
    current.visited = true;
    var link = current.check();
    if(link){
      link.visited = true;
+     stack.push(current);
      eraseWalls(current , link);
      current = link;
+   }else if(stack.length !== 0){
+     current = stack.pop();
    }
 }
 
